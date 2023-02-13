@@ -191,7 +191,7 @@
 			"prefix": "app",
 			"architect": {
 				"build": {
-					"builder": "@angular-devkit/build-angular:browser",
+					"builder": "ngx-build-plus:browser",
 					"options": {
 						"outputPath": "dist/todos",
 						"index": "projects/todos/src/index.html",
@@ -208,7 +208,9 @@
 						"styles": [
 							"projects/todos/src/styles.scss"
 						],
-						"scripts": []
+						"scripts": [],
+						"extraWebpackConfig": "projects/todos/webpack.config.js",
+						"commonChunk": false
 					},
 					"configurations": {
 						"production": {
@@ -224,7 +226,8 @@
 									"maximumError": "4kb"
 								}
 							],
-							"outputHashing": "all"
+							"outputHashing": "all",
+							"extraWebpackConfig": "projects/todos/webpack.prod.config.js"
 						},
 						"development": {
 							"buildOptimizer": false,
@@ -238,21 +241,28 @@
 					"defaultConfiguration": "production"
 				},
 				"serve": {
-					"builder": "@angular-devkit/build-angular:dev-server",
+					"builder": "ngx-build-plus:dev-server",
 					"configurations": {
 						"production": {
-							"browserTarget": "todos:build:production"
+							"browserTarget": "todos:build:production",
+							"extraWebpackConfig": "projects/todos/webpack.prod.config.js"
 						},
 						"development": {
 							"browserTarget": "todos:build:development"
 						}
 					},
-					"defaultConfiguration": "development"
+					"defaultConfiguration": "development",
+					"options": {
+						"port": 4202,
+						"publicHost": "http://localhost:4202",
+						"extraWebpackConfig": "projects/todos/webpack.config.js"
+					}
 				},
 				"extract-i18n": {
-					"builder": "@angular-devkit/build-angular:extract-i18n",
+					"builder": "ngx-build-plus:extract-i18n",
 					"options": {
-						"browserTarget": "todos:build"
+						"browserTarget": "todos:build",
+						"extraWebpackConfig": "projects/todos/webpack.config.js"
 					}
 				}
 			}
