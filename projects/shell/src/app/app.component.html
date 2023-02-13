@@ -53,18 +53,14 @@
     margin: 0 16px;
   }
 
-  .toolbar #twitter-logo {
-    height: 40px;
-    margin: 0 8px;
-  }
-
-  .toolbar #youtube-logo {
-    height: 40px;
+  .toolbar a {
+    height: 60px;
     margin: 0 16px;
+    color: white;
+    padding-top: 30px;
   }
 
-  .toolbar #twitter-logo:hover,
-  .toolbar #youtube-logo:hover {
+  .toolbar a:hover {
     opacity: 0.8;
   }
 
@@ -313,7 +309,8 @@
   />
   <span>Welcome</span>
   <div class="spacer"></div>
-  <!--  -->
+  <a routerLink="books" title="Books"> Books </a>
+  <a routerLink="todos" title="todos"> Todos </a>
 </div>
 
 <div class="content" role="main">
