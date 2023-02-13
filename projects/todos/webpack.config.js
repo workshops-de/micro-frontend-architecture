@@ -1,15 +1,20 @@
-const { shareAll, withModuleFederationPlugin } = require('@angular-architects/module-federation/webpack');
+const {
+  shareAll,
+  withModuleFederationPlugin,
+} = require("@angular-architects/module-federation/webpack");
 
 module.exports = withModuleFederationPlugin({
-
-  name: 'todos',
+  name: "todos",
 
   exposes: {
-    './Component': './projects/todos/src/app/app.component.ts',
+    "./Module": "./projects/todos/src/app/todos/internals/todos.module.ts",
   },
 
   shared: {
-    ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
+    ...shareAll({
+      singleton: true,
+      strictVersion: true,
+      requiredVersion: "auto",
+    }),
   },
-
 });
