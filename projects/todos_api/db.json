@@ -1,0 +1,22 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "text": "Buy 🥛",
+      "isComplete": true,
+      "isPinned": true
+    },
+    {
+      "id": "2",
+      "text": "Go 🏃‍♀️",
+      "isComplete": false,
+      "isPinned": false
+    },
+    {
+      "id": "3",
+      "text": "Build 🏡️",
+      "isComplete": true,
+      "isPinned": false
+    }
+  ]
+}
