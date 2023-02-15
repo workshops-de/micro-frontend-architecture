@@ -1,4 +1,16 @@
 {
-  "books": "http://localhost/books/remoteEntry.js",
-  "todos": "http://localhost/todos/remoteEntry.js"
+  "books": {
+    "remoteEntry": "http://localhost/books/remoteEntry.js",
+    "exposes": "./Module",
+    "name": "Books",
+    "route": "books",
+    "ngModule": "BooksModule"
+  },
+  "todos": {
+    "remoteEntry": "http://localhost/todos/remoteEntry.js",
+    "exposes": "./Module",
+    "name": "Todos",
+    "route": "todos",
+    "ngModule": "TodosModule"
+  }
 }
