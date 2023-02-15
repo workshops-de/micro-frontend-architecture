@@ -1,4 +1,22 @@
 {
-  "books": "http://localhost/books/remoteEntry.js",
-  "todos": "http://localhost/todos/remoteEntry.js"
+  "books": {
+    "remoteEntry": "http://localhost/books/remoteEntry.js",
+    "routePath": "books",
+    "ngModule": "BooksModule",
+    "routeConfig": {
+      "type": "manifest",
+      "remoteName": "books",
+      "exposedModule": "./Module"
+    }
+  },
+  "todos": {
+    "remoteEntry": "http://localhost/todos/remoteEntry.js",
+    "routePath": "todos",
+    "ngModule": "TodosModule",
+    "routeConfig": {
+      "type": "manifest",
+      "remoteName": "todos",
+      "exposedModule": "./Module"
+    }
+  }
 }
