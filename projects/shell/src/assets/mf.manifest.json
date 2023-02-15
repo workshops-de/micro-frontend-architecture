@@ -1,4 +1,4 @@
 {
-  "books": "http://localhost:4201/remoteEntry.js",
-  "todos": "http://localhost:4202/remoteEntry.js"
+  "books": "http://localhost/books/remoteEntry.js",
+  "todos": "http://localhost/todos/remoteEntry.js"
 }

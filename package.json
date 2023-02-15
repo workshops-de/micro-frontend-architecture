@@ -8,7 +8,7 @@
     "build:books": "ng build books",
     "book:api": "bookmonkey-api",
     "start:todos": "ng serve todos",
-    "build:todos": "ng build todos",
+    "build:todos": "ng build todos --base-href /todos/",
     "todos:api": "json-server --watch projects/todos_api/db.json",
     "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
   },
