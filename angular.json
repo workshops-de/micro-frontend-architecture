@@ -138,6 +138,7 @@
               "browserTarget": "books:build:production"
             },
             "development": {
+              "port": 4201,
               "browserTarget": "books:build:development"
             }
           },
@@ -212,6 +213,7 @@
               "browserTarget": "todos:build:production"
             },
             "development": {
+              "port": 4202,
               "browserTarget": "todos:build:development"
             }
           },
